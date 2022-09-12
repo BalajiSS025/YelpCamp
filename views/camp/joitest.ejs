@@ -1,0 +1,65 @@
+<% layout('layouts/boilerplate') %> 
+
+<div class="mt-5">
+    <h1 class="col-md-6 offset-4">
+      New Campground
+    </h1>
+    <form action="/campgrounds" class="min-vh-100 needs-validation" method="POST" novalidate enctype="multipart/form-data">
+    <div class="row">
+    <div class="mb-3 col-md-6 col-sm-8 offset-sm-2 offset-md-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" class="form-control" id="title" name="title" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="mb-3 col-md-6 col-sm-8 offset-sm-2 offset-md-3">
+      <label for="location" class="form-label">Location</label>
+      <input type="text" class="form-control" id="location" name="location" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+    <div class="mb-3 col-md-6 col-sm-8 offset-sm-2 offset-md-3">
+      <label for="price">Price</label>
+    <div class="input-group mb-3">
+      <span class="input-group-text">$</span>
+      <input type="text" class="form-control" id="price" min="0" name="price" required>
+      <span class="input-group-text">.00</span>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+  </div>
+<div class="mb-3 col-md-6 col-sm-8 offset-sm-2 offset-md-3">
+  <label for="basic-url" class="form-label">Add image(s)</label>
+  <div class="input-group mb-3">
+  <input type="file" name="image" id="basic-url" multiple>
+  </div>
+</div>
+
+    <!-- <div class="mb-3 col-md-6 col-sm-8 offset-sm-2 offset-md-3">
+    <label for="basic-url" class="form-label">Image URL</label>
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" id="basic-url" name="image" placeholder="https://example.com/users/" required>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+  </div> -->
+    <div class="form-group mb-3 col-md-6 col-sm-8 offset-sm-2 offset-md-3">
+      <label for="description">Description</label>
+      <textarea class="form-control" id="description" rows="3" name="description" required></textarea>
+      <div class="valid-feedback">
+        Looks good!
+      </div>
+    </div>
+  
+  <div class="col-3 offset-md-3 mb-3">
+    <button class="btn btn-success">Create</button>
+  </div>
+  
+  </div>
+  </form>
+  </div>
+
